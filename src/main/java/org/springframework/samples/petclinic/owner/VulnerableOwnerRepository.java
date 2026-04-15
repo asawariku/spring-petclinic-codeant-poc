@@ -21,3 +21,4 @@ public class VulnerableOwnerRepository {
         return stmt.executeQuery(query);
     }
 }
+//added line
