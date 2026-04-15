@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run CodeAnt
+      - name: Trigger CodeAnt Scan
         run: |
           curl -X POST https://api.codeant.ai/scan \
           -H "Authorization: Bearer ${{ secrets.CODEANT_API_KEY }}" \
@@ -18,4 +18,8 @@ jobs:
             "repo": "${{ github.repository }}",
             "pr": "${{ github.event.pull_request.number }}"
           }'
-#added line for the demo
+
+      - name: Simulate Quality Gate (FAIL for demo)
+        run: |
+          echo "Failing build to simulate critical vulnerability"
+          exit 1
