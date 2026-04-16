@@ -25,3 +25,4 @@ public class VulnerableController {
         Runtime.getRuntime().exec(input);
     }
 }
+//CHECK CODEaNT sCAN fAILS
