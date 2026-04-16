@@ -26,3 +26,4 @@ public class VulnerableController {
     }
 }
 //CHECK CODEaNT sCAN fAILS
+//CHECKS 2 
